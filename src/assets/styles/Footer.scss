@@ -1,0 +1,25 @@
+footer {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: 1px solid rgba(238, 238, 238, 0.08);
+
+    svg {
+        width: 1.3em !important;
+        height: 1.3em !important;
+        margin: 0 6px;
+    }
+
+    p {
+        font-size: 0.8em;
+        opacity: 0.8;
+    }
+
+    p a {
+        text-decoration: underline;
+    }
+}
+
+.light-mode footer {
+    border-top-color: #EEEEEE;
+}

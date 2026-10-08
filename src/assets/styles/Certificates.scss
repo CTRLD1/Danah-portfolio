@@ -1,0 +1,117 @@
+.certificates-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 10%;
+    text-align: left;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.certificate {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(238, 238, 238, 0.08);
+    transition: transform .2s, border-color .2s;
+
+    &:hover {
+        transform: translateY(-4px);
+        border-color: #0E0EEA;
+    }
+}
+
+.cert-media {
+    display: block;
+    aspect-ratio: 4 / 3;
+    background-color: #FFFFFF;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.cert-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0E0EEA;
+
+    svg {
+        color: #FFFFFF;
+    }
+}
+
+.light-mode .cert-placeholder svg {
+    color: #FFFFFF !important;
+}
+
+.cert-body {
+    padding: 16px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    h3 {
+        margin: 0 0 6px;
+        font-size: 1.05rem;
+        line-height: 1.35;
+    }
+
+    p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .cert-issuer {
+        color: #EEEEEE;
+    }
+
+    .cert-date {
+        margin-top: 4px;
+        opacity: 0.7;
+    }
+
+    .cert-link {
+        margin-top: auto;
+        padding-top: 12px;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #6B6BFF;
+
+        svg {
+            font-size: 1em;
+        }
+    }
+}
+
+.light-mode .cert-body {
+    .cert-issuer {
+        color: #1E1E22;
+    }
+
+    .cert-link {
+        color: #0E0EEA;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .certificates-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}

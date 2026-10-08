@@ -1,0 +1,138 @@
+.education-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 10%;
+    text-align: left;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.education-card {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    padding: 28px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(238, 238, 238, 0.08);
+    border-top: 4px solid #0E0EEA;
+    transition: transform .2s, border-color .2s;
+
+    &:hover {
+        transform: translateY(-4px);
+        border-color: #0E0EEA;
+    }
+}
+
+.education-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-shrink: 0;
+
+    img {
+        width: 88px;
+        height: 88px;
+        object-fit: contain;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        padding: 6px;
+        box-sizing: border-box;
+    }
+}
+
+.education-body {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        margin: 6px 0 4px;
+        font-size: 1.25rem;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .education-date {
+        font-family: 'Courier Prime', monospace;
+        font-size: 0.85rem;
+        color: #6B6BFF;
+    }
+
+    .education-org {
+        color: #EEEEEE;
+        font-size: 1rem;
+    }
+
+    .education-highlight {
+        align-self: flex-start;
+        margin-top: 12px;
+        padding: 3px 12px;
+        border-radius: 20px;
+        background-color: #0E0EEA;
+        color: #FFFFFF;
+        font-size: 0.85rem;
+        font-weight: bold;
+    }
+
+    .education-description {
+        margin-top: 12px;
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
+}
+
+.light-mode {
+    .education-card {
+        background-color: #EEEEEE;
+        border-color: #EEEEEE;
+        border-top-color: #0E0EEA;
+
+        &:hover {
+            border-color: #0E0EEA;
+        }
+    }
+
+    .education-body {
+        .education-date {
+            color: #0E0EEA;
+        }
+
+        .education-org {
+            color: #1E1E22;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .education-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .education-card {
+        flex-direction: column;
+        gap: 16px;
+        padding: 22px;
+    }
+
+    .education-logos {
+        flex-direction: row;
+
+        img {
+            width: 64px;
+            height: 64px;
+        }
+    }
+}

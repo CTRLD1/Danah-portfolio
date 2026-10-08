@@ -1,0 +1,11 @@
+# Cloudflare Pages headers — https://developers.cloudflare.com/pages/configuration/headers/
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# CRA fingerprints everything under /static, so it can be cached forever
+/static/*
+  Cache-Control: public, max-age=31536000, immutable

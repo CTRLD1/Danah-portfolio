@@ -1,0 +1,87 @@
+.vertical-timeline span {
+    color: #FFFFFF;
+    font-family: 'Courier Prime', monospace;
+}
+
+.vertical-timeline-element p,
+.vertical-timeline-element h3,
+.vertical-timeline-element h4,
+.vertical-timeline-element span {
+    color: #1E1E22;
+}
+
+.vertical-timeline-element h4 {
+    font-weight: normal;
+    margin-top: 4px;
+}
+
+.timeline-meta {
+    margin-top: 2px !important;
+    font-size: 0.85rem !important;
+    opacity: 0.8;
+}
+
+.timeline-highlight {
+    margin-top: 16px;
+
+    h5 {
+        margin: 0;
+        font-size: 0.95rem;
+        color: #1E1E22;
+    }
+
+    ul {
+        margin: 6px 0 0;
+        padding-left: 20px;
+    }
+
+    li {
+        font-family: "Lato", sans-serif;
+        font-size: 0.9rem;
+        line-height: 1.55;
+        margin-bottom: 4px;
+        color: #1E1E22;
+    }
+}
+
+.timeline-skills {
+    margin-top: 14px;
+}
+
+// First (highlighted) card sits on the accent colour
+.vertical-timeline-element:first-child {
+    p, h3, h4, h5, li {
+        color: #FFFFFF !important;
+    }
+}
+
+.vertical-timeline-element .vertical-timeline-element-date {
+    color: #FFFFFF;
+}
+
+.vertical-timeline-element-icon svg {
+    color: #FFFFFF;
+}
+
+.timeline-logo-icon {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .vertical-timeline-element .vertical-timeline-element-date {
+        color: #1E1E22;
+    }
+
+    .vertical-timeline-element:first-child .vertical-timeline-element-date {
+        color: #FFFFFF;
+    }
+}
